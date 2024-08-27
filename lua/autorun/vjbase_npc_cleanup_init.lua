@@ -1,9 +1,8 @@
--- Load server-side script
 if SERVER then
-    include("server/sv_vjbase_npc_cleanup.lua")
+    include("vjbase_npc_cleanup/init.lua")
+else
+    include("vjbase_npc_cleanup/cl_init.lua")
 end
 
--- Load client-side script
-if CLIENT then
-    include("client/cl_vjbase_npc_cleanup.lua")
-end
+include("vjbase_npc_cleanup/sh_config.lua")
+include("vjbase_npc_cleanup/sh_interface.lua")
